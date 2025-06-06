@@ -8,6 +8,6 @@ router.get("/mockingpets/:quantity", petsController.mockPets);
 
 router.get("/mockingusers", usersController.mockUsers);
 
-router.post("/generateData/", usersController.generateData);
+router.post("/generateData", usersController.generateData);
 
 export default router;

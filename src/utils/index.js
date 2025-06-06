@@ -39,7 +39,7 @@ export const generatePets = (quantity) => {
       specie: faker.animal.type(),
       birthDate: faker.date.birthdate(),
       adopted: false,
-      owner: "",
+      owner: null,
       image: faker.image.avatarGitHub(),
     };
     pets.push(pet);

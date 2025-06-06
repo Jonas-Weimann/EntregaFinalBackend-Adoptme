@@ -1,5 +1,5 @@
 import { petsService, usersService } from "../services/index.js";
-import { generateUsers } from "../utils/index.js";
+import { generateUsers, generatePets } from "../utils/index.js";
 
 const getAllUsers = async (req, res) => {
   const users = await usersService.getAll();
@@ -38,14 +38,14 @@ const mockUsers = async (req, res) => {
   });
 };
 
-const generateData = (req, res) => {
-  const { users, pets } = req.params;
+const generateData = async (req, res) => {
+  const { users, pets } = req.body;
   const petsArray = generatePets(Number(pets));
-  const usersArray = generateUsers(Number(users));
-  usersArray.forEach((user) => {
+  const usersArray = await generateUsers(Number(users));
+  usersArray.map((user) => {
     usersService.create(user);
   });
-  petsArray.forEach((pet) => {
+  petsArray.map((pet) => {
     petsService.create(pet);
   });
   res.status(200).json({
