@@ -83,7 +83,7 @@ paths:
       - name: uid
         in: path
         required: true
-        description: 'id del usuario que se desea actualizar'
+        description: 'id del usuario que se desea eliminar'
         schema:
           $type: String
       responses:
