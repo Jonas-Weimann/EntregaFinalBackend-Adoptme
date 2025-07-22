@@ -88,7 +88,7 @@ paths:
           $type: String
       responses:
         '200':
-          description: El usuario con el id dado fue eliminado satisfactoriamente de la base de datos con la informacion brindada.
+          description: El usuario con el id dado fue eliminado satisfactoriamente de la base de datos.
           content:
             application/json:
               schema:
