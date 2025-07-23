@@ -7,4 +7,4 @@ Imagen disponible en Docker Hub:
 ### Para correrla:
 
 ```bash
-docker run -p 8080:8080 jonasweimann/adoptme-backend
+docker run -p 8080:8080 jonasweimann/adoptme
