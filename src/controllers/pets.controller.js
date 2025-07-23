@@ -23,7 +23,7 @@ const updatePet = async (req, res) => {
   const petUpdateBody = req.body;
   const petId = req.params.pid;
   const result = await petsService.update(petId, petUpdateBody);
-  res.send({ status: "success", message: "pet updated" });
+  res.send({ status: "success", payload: result });
 };
 
 const deletePet = async (req, res) => {
